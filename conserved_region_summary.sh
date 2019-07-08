@@ -70,13 +70,14 @@ fi
 echo "step 1, check the fa file length."
 echo `date`
 ###############
-python $script_folder"/summary_aligned_ref_length.py" $fa_f #call the command to check the length of aligned_ref
+#call the command to check the length of aligned_ref
+python $script_folder"/summary_aligned_ref_length.py" $fa_f 
 length_sum_f="database_len_summary.txt" 
 length_count=`cut -f2 -d" " $length_sum_f | sort -u | wc -l` 
 
 if [ $length_count -ne 1 ] 
 then
-    echo ""
+  echo ""
   echo "Warning: The file $fa_f has unequal length in conserved_region_summary.sh, exit."
   echo ""
   exit 1
@@ -86,7 +87,8 @@ fi
 echo "step 2, count the ATCG frequency by R."
 echo `date`
 ###############
-Rscript $script_folder"/count_freq_micro_database.R" file_name=$fa_f
+#call the Rscript to calculate the ATCG frequency of every position
+Rscript $script_folder"/count_freq_micro_database.R" file_name=$fa_f 
 
 if [ ! -s $fa_f"_freq_summary.txt" ] 
 then
@@ -100,4 +102,5 @@ fi
 echo "step 3, summary the ATCG frequency by R and find the highly conserved region."
 echo `date`
 ###############
+#Summary the ATCG frequency by R and find the highly conserved region
 Rscript $script_folder"/summary_freq.R" count_freq_in=$fa_f"_freq_summary.txt" ref_matrix_file=$Ecoli_f step_width=$step_width
