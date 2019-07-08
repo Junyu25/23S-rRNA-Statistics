@@ -70,9 +70,9 @@ fi
 echo "step 1, check the fa file length."
 echo `date`
 ###############
-python $script_folder"/summary_aligned_ref_length.py" $fa_f
-length_sum_f="database_len_summary.txt"
-length_count=`cut -f2 -d" " $length_sum_f | sort -u | wc -l`
+python $script_folder"/summary_aligned_ref_length.py" $fa_f #call the command to check the length of aligned_ref
+length_sum_f="database_len_summary.txt" 
+length_count=`cut -f2 -d" " $length_sum_f | sort -u | wc -l` 
 
 if [ $length_count -ne 1 ] 
 then
