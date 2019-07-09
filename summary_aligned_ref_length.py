@@ -13,10 +13,10 @@ Efa = open('database_len_summary.txt', 'w')
 
 with open(sys.argv[1]) as infile: #Open the file $fa_f at the path given by sys.argv[1], and assign the name infile to this file object
 	for i in infile:
-		if re.match('>', i):
-			isplit = str(i.rstrip())
+		if re.match('>', i): #match the begining of the fasta
+			isplit = str(i.rstrip()) #Strip the firt line of the fasta
 		else:
-			str_length = str(len(i.rstrip()))
+			str_length = str(len(i.rstrip())) #count the length of striped sequence
 			#print str_length
 			print (isplit+" "+str_length, file = Efa)
 			
