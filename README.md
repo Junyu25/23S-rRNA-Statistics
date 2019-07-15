@@ -13,11 +13,9 @@
   
 * count_freq_micro_database.R 计算aligned_silva的每个位置的ATCG出现频率，用于做整个保守区统计的流程conserved_region_summary.sh中的第二步
 
-* summary_freq.R 对具体的ATCG比例的连贯性进行，整个保守区统计的流程conserved_region_summary.sh中的第三步，也是核心。
-
-
----
-
+* summary_freq.R 对具体的ATCG比例的连贯性进行，整个保守区统计的流程conserved_region_summary.
+  
+  
 * primer_coverage_estimator.sh 统计单一引物的覆盖度情况的整体流程
 
 * coverage_calculate.R 计算引物覆盖数和整体背景的比例，用于引物覆盖度计算primer_coverage_estimator.sh的流程中的2.1步骤

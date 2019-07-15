@@ -18,7 +18,7 @@
 #Three steps in all:
 #Step 1: calculate the frequency percentage and transfer it into a prob and a max matrix, the prob matrix can be used to calculate the ATCG plot.
 #Step 2: In the max matrix, find the high conserved regions by stepwidth, and mark it in the summary table when it meet the cutoff.
-#Step 3: Using the summary table ,output the sorted result by region length, and annotate the location and conresponding sequence on Ecoli.
+#Step 3: Using the summary table, output the sorted result by region length, and annotate the location and conresponding sequence on Ecoli.
 
 step_width=7
 
