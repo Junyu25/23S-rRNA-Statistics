@@ -17,7 +17,7 @@ for seq_record in SeqIO.parse(f,"fasta"):
     elif domain[0] == "Eukaryota":
         Eukaryota.write(">"+str(seq_record.description)+"\n"+str(reseq))
     elif domain[0] == "Archaea":
-        Eukaryota.write(">"+str(seq_record.description)+"\n"+str(reseq))
+        Archaea.write(">"+str(seq_record.description)+"\n"+str(reseq))
     else:
         Other.write(">"+str(seq_record.description)+"\n"+str(reseq))  
         
