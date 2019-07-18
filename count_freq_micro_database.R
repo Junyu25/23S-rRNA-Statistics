@@ -40,8 +40,8 @@ if (!exists("file_name")) {
 
 con <- file(file_name, "r")
 
-#generate a matrix which have 50000 col and 6 row
-col_num=50000
+#generate a matrix which have 149999 col and 6 row
+col_num=149999
 out_matrix <- matrix(0, nrow=6,ncol=col_num)
 rownames(out_matrix)=c("A","T","C","G","-",".")
 colnames(out_matrix)=1:col_num
